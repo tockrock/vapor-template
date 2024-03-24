@@ -5,7 +5,7 @@ func routes(_ app: Application) throws {
     {{#leaf}}app.get { req async throws in
         try await req.view.render("index", ["title": "Hello Vapor!"])
     }{{/leaf}}{{^leaf}}app.get { req async in
-        "It works!"
+        "It works! with my forked branch!"
     }{{/leaf}}
 
     app.get("hello") { req async -> String in
